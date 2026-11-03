@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Flamingo Media Ads Bot</title>
+<title>Flamingo Media Ads Bot</title>
+<meta name="description" content="A Telegram bot that helps small businesses in Syria create and run Facebook and Instagram advertisements in Arabic.">
 <style>
   :root {
     --bg: #ffffff; --fg: #1a1a1a; --muted: #5c5c5c;
@@ -26,30 +27,70 @@
     padding: 0 16px;
   }
   main { max-width: 720px; margin: 0 auto; padding: 48px 0 72px; }
-  h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 6px; }
-  .sub { color: var(--muted); font-size: 0.92rem; margin: 0 0 32px; }
+  .hero { padding-bottom: 28px; border-bottom: 1px solid var(--rule); margin-bottom: 8px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 10px; }
+  .lede { font-size: 1.08rem; color: var(--fg); margin: 0 0 18px; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 0; }
   h2 { font-size: 1.15rem; margin: 36px 0 10px; padding-top: 18px; border-top: 1px solid var(--rule); }
-  h2:first-of-type { border-top: none; padding-top: 0; }
-  ul { padding-left: 22px; }
+  h2.first { border-top: none; padding-top: 6px; }
+  ul, ol { padding-left: 22px; }
   li { margin: 6px 0; }
   a { color: var(--accent); }
   .card { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 16px 18px; margin: 20px 0; }
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps li { counter-increment: s; position: relative; padding-left: 38px; margin: 12px 0; }
+  .steps li::before {
+    content: counter(s); position: absolute; left: 0; top: 1px;
+    width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 0.85rem; font-weight: 600;
+  }
   .ar { direction: rtl; text-align: right; font-size: 1.02rem; }
-  .ar h2 { text-align: right; }
+  .ar h2, .ar p { text-align: right; }
   footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.88rem; }
 </style>
 </head>
 <body>
 <main>
 
-  <h1>Privacy Policy</h1>
-  <p class="sub">Flamingo Media advertising bot on Telegram (<strong>@spark_MeBot</strong>) · Last updated 3 November 2026</p>
+  <div class="hero">
+    <h1>Flamingo Media Ads Bot</h1>
+    <p class="lede">A Telegram bot that helps small businesses in Syria create and
+    run Facebook and Instagram advertisements — entirely in Arabic, without an ad
+    account, a card, or any experience of advertising.</p>
+    <p class="meta">Telegram: <strong>@spark_MeBot</strong> · Operated by Flamingo Media</p>
+  </div>
 
-  <p>This service is a Telegram bot that helps small businesses create and run
-  advertisements on Facebook and Instagram. This page explains what the service
-  collects, why, and who else sees it.</p>
+  <h2 class="first">How it works</h2>
+  <ol class="steps">
+    <li>The shop owner messages the bot and describes their business in one message, in Arabic.</li>
+    <li>The bot writes the advertisement text and prepares the image. They can ask for changes until they are happy with it.</li>
+    <li>They choose a city to target, a budget, and how many days to run.</li>
+    <li>They connect their own Facebook Page, which they keep full ownership of and can disconnect at any time.</li>
+    <li>They pay locally by money transfer, because they cannot pay Meta directly.</li>
+    <li>When the advertisement finishes, they get a short report in Arabic explaining what they got for their money.</li>
+  </ol>
 
-  <h2>What we collect</h2>
+  <div class="card">
+    <p style="margin:0 0 8px"><strong>Want your data removed?</strong></p>
+    <p style="margin:0"><a href="data-deletion/">How to delete your data</a> — it takes one message to the bot.</p>
+  </div>
+
+  <div class="ar">
+    <h2>شو هاد؟</h2>
+    <p>بوت على تيليغرام يساعد أصحاب المحلات والمشاريع الصغيرة بسوريا يعملوا إعلانات
+    على فيسبوك وإنستغرام — كلشي بالعربي، بدون حساب إعلانات وبدون بطاقة بنكية وبدون
+    أي خبرة بالإعلانات.</p>
+    <p>تحكيلنا عن مشروعك برسالة واحدة، ومنجهزلك نص الإعلان والصورة، وتختار المدينة
+    والمبلغ وعدد الأيام، وبعد ما يخلص الإعلان منبعتلك تقرير بالعربي شو صار فيه.</p>
+    <p>للتواصل: <strong>@spark_MeBot</strong></p>
+  </div>
+
+  <h2 id="privacy">Privacy Policy</h2>
+  <p class="meta" style="margin-bottom:16px">Last updated 3 November 2026</p>
+
+  <p>This page explains what the service collects, why, and who else sees it.</p>
+
+  <h3 style="font-size:1rem;margin:22px 0 8px">What we collect</h3>
   <ul>
     <li><strong>Your Telegram account id and first name</strong>, so the bot can recognise you between messages.</li>
     <li><strong>What you tell the bot about your business</strong> — the description you write, the city you choose, the budget and the number of days.</li>
@@ -60,55 +101,54 @@
   <p>The bot does not ask for, and does not store, your card details. Payment is
   made outside the bot by money transfer.</p>
 
-  <h2>Why we collect it</h2>
+  <h3 style="font-size:1rem;margin:22px 0 8px">Why we collect it</h3>
   <p>Only to do what you asked: to write your advertisement, create the image,
   publish the advertisement on Meta, confirm your payment, and report back how
   the advertisement performed.</p>
 
-  <h2>Who else sees it</h2>
+  <h3 style="font-size:1rem;margin:22px 0 8px">Who else sees it</h3>
   <ul>
     <li><strong>Meta (Facebook and Instagram)</strong> — receives your advertisement text, its image, the city you are targeting and your Page id, because that is where the advertisement runs.</li>
-    <li><strong>Anthropic</strong> — receives your business description, to write the advertisement text.</li>
+    <li><strong>Anthropic</strong> — receives your business description and your Page name, to write the advertisement text.</li>
     <li><strong>Google</strong> — receives your business description and any photo you upload, to create or improve the advertisement image.</li>
+    <li><strong>Telegram</strong> — delivers the bot's messages to you, including your advertisement and its results.</li>
   </ul>
   <p>Your information is not sold, and it is not shared with anyone else.</p>
 
-  <h2>How long we keep it</h2>
+  <h3 style="font-size:1rem;margin:22px 0 8px">How long we keep it</h3>
   <p>Order records, receipts and advertisement results are kept as a business
   record of work that was paid for. Images are kept while the advertisement is
   running and for the record afterwards.</p>
 
-  <h2>Your choices</h2>
-  <div class="card">
-    <p style="margin:0">You can ask for your information to be deleted, or ask
-    what is held about you, by sending a message to <strong>@spark_MeBot</strong>
-    on Telegram. Records required to keep proof of a paid order may be retained.</p>
-  </div>
+  <h3 style="font-size:1rem;margin:22px 0 8px">Your choices</h3>
+  <p>You can ask for your information to be deleted, or ask what is held about
+  you, by sending a message to <strong>@spark_MeBot</strong> on Telegram. See
+  <a href="data-deletion/">how to delete your data</a>. Records required to keep
+  proof of a paid order may be retained.</p>
 
-  <h2>Children</h2>
+  <h3 style="font-size:1rem;margin:22px 0 8px">Children</h3>
   <p>This service is for business owners and is not intended for anyone under 18.</p>
 
-  <h2>Changes</h2>
+  <h3 style="font-size:1rem;margin:22px 0 8px">Changes</h3>
   <p>If this policy changes, the new version will appear on this page with a new
-  date at the top.</p>
+  date above.</p>
 
   <div class="ar">
     <h2>سياسة الخصوصية — بالعربي</h2>
-    <p>هاد البوت يساعد أصحاب المحلات والمشاريع الصغيرة يعملوا إعلانات على فيسبوك
-    وإنستغرام.</p>
     <p><strong>شو منجمع؟</strong> رقم حسابك على تيليغرام واسمك الأول، وشو كتبتلنا عن
     مشروعك، والمدينة والمبلغ وعدد الأيام، والصور اللي ترسلها، وصورة إشعار الحوالة
     مع رقمها لنتأكد إنه وصل، ومعلومات صفحتك على فيسبوك لنشر الإعلان عليها.</p>
     <p><strong>ما منجمع</strong> معلومات بطاقتك البنكية. الدفع بيصير برا البوت بحوالة.</p>
     <p><strong>مين غيرنا بيشوفها؟</strong> ميتا (فيسبوك وإنستغرام) لأنه هونيك بيشتغل
-    الإعلان، وAnthropic لكتابة نص الإعلان، وGoogle لتجهيز الصورة. ما منبيع
-    معلوماتك ولا منشاركها مع حد تاني.</p>
+    الإعلان، وAnthropic لكتابة نص الإعلان، وGoogle لتجهيز الصورة، وتيليغرام لتوصيل
+    الرسائل إلك. ما منبيع معلوماتك ولا منشاركها مع حد تاني.</p>
     <p><strong>حقك:</strong> فيك تطلب حذف معلوماتك أو تسأل شو عندنا عنك، بس ابعتلنا
     رسالة على <strong>@spark_MeBot</strong>.</p>
   </div>
 
   <footer>
-    Flamingo Media · Contact: <strong>@spark_MeBot</strong> on Telegram
+    Flamingo Media · Contact: <strong>@spark_MeBot</strong> on Telegram ·
+    <a href="data-deletion/">Delete your data</a>
   </footer>
 
 </main>
